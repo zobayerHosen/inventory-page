@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1c0506;
+}
+:root {
+  --common-font-family: "Public Sans", sans-serif;
+  --primary-color: #fb031e;
+  --text-color: #e8e8e8;
+  --heading-title-size: 42px;
+  --border-color: #423838;
+}
+
+.zh_container {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+/* heading title */
+.zh_heading-title {
+  font-size: var(--heading-title-size);
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-family: var(--common-font-family);
+}
+
+#inventory {
+  padding-top: 80px;
+}
+
+/* search start */
+.zh_full-box-container {
+  display: flex;
+  gap: 24px;
+  padding-top: 24px;
+}
+.zh_left-side-content {
+  max-width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.zh_search {
+  display: flex;
+  align-items: center;
+}
+.zh_search-relative {
+  position: relative;
+  width: 337px;
+}
+.zh_search-input {
+  width: 100%;
+  padding: 24px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: var(--common-font-family);
+  font-size: 16px;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  height: 40px;
+  border-radius: 0;
+}
+.zh_search-input::placeholder {
+  color: var(--text-color);
+}
+.zh_search-btn {
+  padding: 13px 13px 13px 13px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 16px;
+  overflow: hidden;
+  line-height: 1.5em;
+}
+/* search end */
+
+/* sorting start */
+.zh_sorting-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.zh_empty-area {
+  padding: 24px;
+  display: block;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: var(--common-font-family);
+  color: var(--text-color);
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-right: 0;
+  border-radius: 0;
+  width: 567px;
+}
+.zh_select-wrapper {
+  padding: 24px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 547px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-left: 0;
+}
+.zh_select-for-sort {
+  display: flex;
+  justify-content: space-between;
+}
+.zh_select-for-sort select {
+  background-color: rgba(255, 255, 255, 0);
+  font-family: var(--common-font-family);
+  color: var(--text-color);
+  height: 40px;
+  border: none;
+  border-left: 1px solid var(--border-color);
+  width: 214px;
+  height: 49px;
+  padding-left: 10px;
+  /* text-overflow: ellipsis; */
+}
+.zh_select-for-sort select option {
+  background-color: #1f0507;
+  max-width: 400px;
+  display: block;
+}
+/* sorting end */
+
+/* inventory content start */
+
+/* ========= left side content / SIDEBAR */
+.zh_inventory-content {
+  padding-top: 24px;
+}
+.zh_sidebar-box {
+  border: 1px solid var(--border-color);
+
+  padding: 22px;
+}
+.zh_sidebar-title {
+  padding: 24px 24px 24px 0px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color);
+  font-family: var(--common-font-family);
+}
+
+/* filter options */
+.zh_filter-box-content {
+  border-bottom: 1px solid var(--border-color);
+  padding: 14px 0px 18px 0;
+  cursor: pointer;
+}
+.zh_content-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.zh_down-icon {
+  transition: transform 0.3s ease-in-out;
+}
+.zh_filter-box-content[open] .zh_content-summary .zh_down-icon {
+  transform: rotate(180deg);
+}
+.zh_front-title {
+  font-size: 16px;
+  font-family: var(--common-font-family);
+  color: var(--text-color);
+}
+.zh_down-icon {
+  color: var(--text-color);
+}
+.zh_toggle-content {
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+  margin-top: 14px;
+  color: white;
+  font-family: var(--common-font-family);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.zh-transition {
+  transition: 1s ease-in-out;
+}
+.b-content {
+  display: inline-block;
+}
+
+/*  right side inventory content start */
+.zh_card-box {
+  border: 1px solid var(--border-color);
+  margin-top: 24px;
+  padding: 24px;
+  display: flex;
+  gap: 40px;
+}
+.zh_image-size {
+  width: 458px;
+  height: 343px;
+}
+.zh_image-size a img {
+  max-width: 458px;
+  height: 344px;
+  display: block;
+  overflow: hidden;
+}
+.zh_top-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: var(--text-color);
+  font-family: var(--common-font-family);
+}
+.zh_top-title span {
+  background-color: var(--primary-color);
+  padding: 2px 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  line-height: 1.6em;
+}
+.zh_top-title h5 a {
+  font-size: 18px;
+  line-height: 1.3em;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.zh_car-price {
+  font-family: var(--common-font-family);
+}
+.zh_car-price h2 {
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+.zh_car-price h2 > span {
+  color: var(--primary-color);
+}
+.zh_car-price h2 > small {
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.6em;
+  font-family: var(--common-font-family);
+  font-weight: 400;
+  margin-left: 8px;
+}
+.zh_car-facilite {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-family: var(--common-font-family);
+  font-weight: 400;
+  font-size: 13px;
+}
+.zh_row-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+  gap: 12px;
+}
+.zh_row-item svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.zh_carfaxImage {
+  width: 147px;
+  height: 47px;
+}
+.zh_carfaxImage a img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.zh_carfaxImage a {
+  display: block;
+}
+.zh_buttons-align {
+  display: flex;
+  gap: 20px;
+  margin-top: 140px;
+  align-items: center;
+}
+.zh_buttons-align a {
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 12px 24px;
+  color: var(--text-color);
+  font-family: var(--common-font-family);
+  font-weight: 700;
+  line-height: 1.5em;
+  width: 273px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  text-transform: uppercase;
+}
+.zh_buttons-align a svg {
+  width: 19.5px;
+  color: white;
+  height: 20px;
+}
+input[type="checkbox"]:checked {
+  accent-color: var(--primary-color);
+}
+/* inventory content end */

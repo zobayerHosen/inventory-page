@@ -1,0 +1,77 @@
+/* responsive.css */
+
+/* Tablet and below (<= 1024px) */
+@media (max-width: 1024px) {
+  .ms_container {
+    flex-direction: column;
+  }
+  .info-wrapper {
+    align-items: flex-end;
+  }
+}
+
+/* Mobile and below (<= 768px) */
+@media (max-width: 768px) {
+  .ms_container {
+    padding: 10px;
+    gap: 20px;
+  }
+  .ms_header {
+    padding: 10px;
+  }
+
+  .ms_btn {
+    align-items: center;
+    padding: 6px 12px;
+    top: 20px;
+    left: 10px;
+  }
+
+  .ms_left,
+  .ms_right {
+    min-width: 100%;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  .price-text {
+    font-size: 18px;
+  }
+
+  .carfax {
+    width: 100px;
+  }
+
+  .info {
+    line-height: 1.8;
+    font-size: 14px;
+  }
+
+  .apply-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* Small mobile (<= 480px) */
+@media (max-width: 480px) {
+  .ms_header {
+    font-size: 16px;
+    gap: 6px;
+  }
+  .speed-mile {
+    display: block;
+  }
+  .apply-btn {
+    width: 100%;
+  }
+  .speed {
+    justify-content: space-between;
+  }
+
+  .carfax {
+    width: 120px;
+  }
+}

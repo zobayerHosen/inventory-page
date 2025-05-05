@@ -1,0 +1,238 @@
+:root {
+  --bg-color: #1a0000;
+  --text-color: #e0d9d9;
+  --heading-color: #f5ecec;
+  --accent-color: red;
+  --price-color: #fb031e;
+  --font-family: sans-serif;
+  --container-max-width: 1540px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 45px 0;
+  color: var(--text-color);
+}
+.ms_header {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+.ms_container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  gap: 30px;
+}
+
+.ms_left,
+.ms_right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.main-image {
+  width: 90%;
+}
+
+/* swiper */
+.ms_mySwiper2 {
+  width: 100%;
+  max-height: 530px;
+}
+
+.ms_mySwiper {
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.ms_mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+  cursor: pointer;
+  border: 0.5px solid rgb(90, 81, 81);
+}
+
+.ms_mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.ms_mySwiper img,
+.ms_mySwiper2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 20px !important;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text-color) !important;
+}
+.mini-swiper-button-next,
+.mini-swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 22px !important;
+}
+
+.mini-swiper-button-next::after,
+.mini-swiper-button-prev::after {
+  font-size: 16px;
+}
+
+.mini-swiper-button-next {
+  right: 10px;
+}
+
+.mini-swiper-button-prev {
+  left: 10px;
+}
+
+.ms_btn {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  padding: 8px 16px;
+  border: 0.5px solid gray;
+  border-radius: 6px;
+  position: absolute;
+  top: 24px;
+  left: 14px;
+  z-index: 10;
+  background: linear-gradient(220deg, #aa0013 0%, var(--accent-color) 100%);
+}
+.ms_btn p {
+  font-size: large;
+  font-weight: 700;
+}
+.svg3 {
+  text-align: center;
+}
+
+.ms_right {
+  border: 0.5px solid rgb(141, 130, 130);
+  padding: 24px;
+}
+
+.subaru {
+  display: flex;
+  gap: 22px;
+}
+.badge {
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 5px 10px;
+  font-weight: 500;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 28px;
+  padding: 20px 0;
+  color: #fb031e;
+  font-weight: bold;
+}
+.price-text {
+  font-size: 22px;
+  color: var(--text-color);
+  padding-left: 10px;
+  font-weight: medium;
+}
+.speed-mile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.speed {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.ms_speed1,
+.ms_speed2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.svg1,
+.svg2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.info {
+  color: var(--text-color);
+  margin: 28px 0 0 0;
+  line-height: 2;
+}
+
+.info strong {
+  color: var(--heading-color);
+  display: inline-block;
+}
+
+.carfax {
+  align-self: flex-end;
+  width: 150px;
+  height: auto;
+}
+.apply-btn {
+  display: inline-block;
+  font-size: 16px;
+  padding: 16px 30px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
